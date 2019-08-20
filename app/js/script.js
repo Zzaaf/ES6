@@ -271,19 +271,46 @@ let response = [
     }
 ];
 
-let arr_test = [];
+let arr_name = [];
+let arr_balanse = [];
 
 response.forEach(element => {
-    arr_test.push(element.name);
+    arr_name.push(element.name);    
+});
+
+response.forEach(element => {
+    arr_balanse.push(element.balance);
 });
 
 let body = document.getElementsByTagName('body')[0];
 let ul = document.createElement('ul');
+
+ul.classList.add('list-group');
 body.appendChild(ul);
 
-arr_test.forEach(element => {
+arr_name.forEach(element => {
     let li = document.createElement('li');
+    li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
     li.innerText = element;
-    ul.appendChild(li);
+
+    ul.appendChild(li);    
 });
-console.log(arr_test);
+
+arr_balanse.forEach(element => {
+    let span = document.createElement('span');    
+    span.classList.add('badge', 'badge-primary', 'badge-pill');
+    span.innerHTML = element;
+});
+
+console.log(arr_name);
+
+
+let numbers = [-11, -8 , 5, 0, 4, 7, 10];
+let new_numbers = numbers.filter(element => {
+    return element < 0 || 0;
+});
+
+console.log(new_numbers);
+
+const data = response.map(({ name, balance })  =>  ({ name, balance }));
+console.log(data);
