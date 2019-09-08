@@ -1,11 +1,12 @@
-let body = document.getElementsByTagName('body')[0],
+'use strict';
+
+var body = document.getElementsByTagName('body')[0],
     container = document.createElement('div');
 
 body.appendChild(container);
 container.classList.add('container');
 
-let response = [
-    {
+var response = [{
     "_id": "5d57c12ec06d325a4387b1e8",
     "index": 0,
     "guid": "81017c3e-87c3-4b6e-b207-88f2a76f0282",
@@ -24,33 +25,20 @@ let response = [
     "registered": "2016-04-02T05:28:18 -03:00",
     "latitude": -33.380073,
     "longitude": -32.792783,
-    "tags": [
-        "ut",
-        "qui",
-        "nulla",
-        "aliquip",
-        "excepteur",
-        "duis",
-        "enim"
-    ],
-    "friends": [
-        {
+    "tags": ["ut", "qui", "nulla", "aliquip", "excepteur", "duis", "enim"],
+    "friends": [{
         "id": 0,
         "name": "Patrick Sloan"
-        },
-        {
+    }, {
         "id": 1,
         "name": "Langley Cohen"
-        },
-        {
+    }, {
         "id": 2,
         "name": "Decker Ortega"
-        }
-    ],
+    }],
     "greeting": "Hello, Conrad Mccall! You have 2 unread messages.",
     "favoriteFruit": "apple"
-    },
-    {
+}, {
     "_id": "5d57c12ef989f14058054f71",
     "index": 1,
     "guid": "8c45faae-b141-45a0-96cf-fc916fb81aee",
@@ -69,33 +57,20 @@ let response = [
     "registered": "2016-10-31T02:18:38 -03:00",
     "latitude": 40.849771,
     "longitude": 77.88267,
-    "tags": [
-        "Lorem",
-        "cillum",
-        "eiusmod",
-        "mollit",
-        "officia",
-        "qui",
-        "amet"
-    ],
-    "friends": [
-        {
+    "tags": ["Lorem", "cillum", "eiusmod", "mollit", "officia", "qui", "amet"],
+    "friends": [{
         "id": 0,
         "name": "Moss Giles"
-        },
-        {
+    }, {
         "id": 1,
         "name": "Bryan Wilson"
-        },
-        {
+    }, {
         "id": 2,
         "name": "Elliott Lynch"
-        }
-    ],
+    }],
     "greeting": "Hello, Mendoza Little! You have 2 unread messages.",
     "favoriteFruit": "banana"
-    },
-    {
+}, {
     "_id": "5d57c12e32b429f452c038bb",
     "index": 2,
     "guid": "6976ad99-b1bf-40ee-a6da-9cda70384fa9",
@@ -114,33 +89,20 @@ let response = [
     "registered": "2014-10-22T10:26:48 -04:00",
     "latitude": -69.345137,
     "longitude": -20.166993,
-    "tags": [
-        "velit",
-        "irure",
-        "cillum",
-        "dolor",
-        "consequat",
-        "Lorem",
-        "mollit"
-    ],
-    "friends": [
-        {
+    "tags": ["velit", "irure", "cillum", "dolor", "consequat", "Lorem", "mollit"],
+    "friends": [{
         "id": 0,
         "name": "Bass Howell"
-        },
-        {
+    }, {
         "id": 1,
         "name": "Mcgowan Fitzgerald"
-        },
-        {
+    }, {
         "id": 2,
         "name": "Dominguez Hatfield"
-        }
-    ],
+    }],
     "greeting": "Hello, Harmon Callahan! You have 4 unread messages.",
     "favoriteFruit": "strawberry"
-    },
-    {
+}, {
     "_id": "5d57c12e17777bb8f5debf7b",
     "index": 3,
     "guid": "e0c6b536-c06b-4c52-b015-43e330c7c7a0",
@@ -159,33 +121,20 @@ let response = [
     "registered": "2017-06-15T09:29:42 -03:00",
     "latitude": -37.128466,
     "longitude": -135.816383,
-    "tags": [
-        "fugiat",
-        "ex",
-        "duis",
-        "anim",
-        "qui",
-        "est",
-        "duis"
-    ],
-    "friends": [
-        {
+    "tags": ["fugiat", "ex", "duis", "anim", "qui", "est", "duis"],
+    "friends": [{
         "id": 0,
         "name": "Malinda Molina"
-        },
-        {
+    }, {
         "id": 1,
         "name": "Chavez Hull"
-        },
-        {
+    }, {
         "id": 2,
         "name": "Delaney Salazar"
-        }
-    ],
+    }],
     "greeting": "Hello, Fran Dodson! You have 9 unread messages.",
     "favoriteFruit": "apple"
-    },
-    {
+}, {
     "_id": "5d57c12ebc734d25d3df8825",
     "index": 4,
     "guid": "0e3fef1e-38e1-40f1-bf1b-ac581821f4f4",
@@ -204,33 +153,20 @@ let response = [
     "registered": "2016-05-21T01:31:34 -03:00",
     "latitude": 14.16988,
     "longitude": -97.644451,
-    "tags": [
-        "sit",
-        "veniam",
-        "eu",
-        "amet",
-        "aliquip",
-        "non",
-        "labore"
-    ],
-    "friends": [
-        {
+    "tags": ["sit", "veniam", "eu", "amet", "aliquip", "non", "labore"],
+    "friends": [{
         "id": 0,
         "name": "Jennings Beach"
-        },
-        {
+    }, {
         "id": 1,
         "name": "Elvira Turner"
-        },
-        {
+    }, {
         "id": 2,
         "name": "Copeland Guy"
-        }
-    ],
+    }],
     "greeting": "Hello, Mullins Tyler! You have 7 unread messages.",
     "favoriteFruit": "apple"
-    },
-    {
+}, {
     "_id": "5d57c12e85367b0cc0d9e704",
     "index": 5,
     "guid": "ff298014-bc46-471c-89c7-6402a562a679",
@@ -249,90 +185,80 @@ let response = [
     "registered": "2014-09-06T11:41:33 -04:00",
     "latitude": 10.808954,
     "longitude": -113.855057,
-    "tags": [
-        "culpa",
-        "laboris",
-        "et",
-        "ullamco",
-        "cillum",
-        "dolore",
-        "Lorem"
-    ],
-    "friends": [
-        {
+    "tags": ["culpa", "laboris", "et", "ullamco", "cillum", "dolore", "Lorem"],
+    "friends": [{
         "id": 0,
         "name": "Shelby Good"
-        },
-        {
+    }, {
         "id": 1,
         "name": "Massey Ross"
-        },
-        {
+    }, {
         "id": 2,
         "name": "Juarez Hays"
-        }
-    ],
+    }],
     "greeting": "Hello, Leann Mckee! You have 7 unread messages.",
     "favoriteFruit": "strawberry"
-    }
-];
+}];
 
 // For Each -----------------------------------------------------------------------
 
-let arr_name = [];
-let arr_balanse = [];
+var arr_name = [];
+var arr_balanse = [];
 
-response.forEach(element => {
-    arr_name.push(element.name);    
+response.forEach(function (element) {
+    arr_name.push(element.name);
 });
 
-response.forEach(element => {
+response.forEach(function (element) {
     arr_balanse.push(element.balance);
 });
 
-let ul = document.createElement('ul');
+var ul = document.createElement('ul');
 
 ul.classList.add('list-group');
 container.appendChild(ul);
 
-arr_name.forEach(element => {
-    let li = document.createElement('li');
+arr_name.forEach(function (element) {
+    var li = document.createElement('li');
     li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
     li.innerText = element;
 
-    ul.appendChild(li);    
+    ul.appendChild(li);
 });
 
-arr_balanse.forEach(element => {
-    let span = document.createElement('span');    
+arr_balanse.forEach(function (element) {
+    var span = document.createElement('span');
     span.classList.add('badge', 'badge-primary', 'badge-pill');
     span.innerHTML = element;
 
-    let li = document.getElementsByClassName('badge');
+    var li = document.getElementsByClassName('badge');
 
-    for(let i = 0; i < li.length; i++) {
+    for (var i = 0; i < li.length; i++) {
         li[i].appendChild(span);
-    }    
+    }
 });
 
 console.log(arr_name);
 
 // Map --------------------------------------------------------------------------
 
-let numbers = [-11, -8 , 5, 0, 4, 7, 10];
-let new_numbers = numbers.filter(element => {
+var numbers = [-11, -8, 5, 0, 4, 7, 10];
+var new_numbers = numbers.filter(function (element) {
     return element < 0 || 0;
 });
 
 console.log(new_numbers);
 
-const data = response.map(({ name, balance })  =>  ({ name, balance }));
+var data = response.map(function (_ref) {
+    var name = _ref.name,
+        balance = _ref.balance;
+    return { name: name, balance: balance };
+});
 console.log(data);
-
 
 // Filter ----------------------------------------------------------------------
 
-let filter = response.filter(elem => {
+var filter = response.filter(function (elem) {
     return elem.age > 29;
 });
 
@@ -340,15 +266,15 @@ console.log(filter);
 
 // Every and Some --------------------------------------------------------------
 
-let every = response.every(elem => {
+var every = response.every(function (elem) {
     return elem.company == 'OPPORTECH';
-})
+});
 
 console.log(every);
 
-let some = response.some(elem => {
+var some = response.some(function (elem) {
     return elem.company == 'OPPORTECH';
-})
+});
 
 console.log(some);
 
@@ -357,7 +283,7 @@ console.log(some);
 // Task 1.
 // Создайте переменную a = 4. Используя конструкцию if проверьте что a == 4. Выведите сообщение в консоль.
 
-let a = 4;
+var a = 4;
 
 if (a == 4) {
     console.info('А = 4');
@@ -366,13 +292,13 @@ if (a == 4) {
 // Task 2.
 // Создайте b = 8 и с = 10. С помощью if, else выведите в консоль сообщение о том, какая из переменных больше.
 
-let b = 8,
+var b = 8,
     c = 10;
 
 if (b > c) {
     console.info('B больше C');
 } else {
-    console.info('C больше B')
+    console.info('C больше B');
 }
 
 // Task 4.
@@ -380,39 +306,39 @@ if (b > c) {
 // Добавьте кнопку. При нажатии кнопки выполняйте функцию, которая сравнит два числа и выведет большее на страницу. 
 // Если числа равны - выводится строка "равны".
 
-let input_1 = document.createElement('input'),
+var input_1 = document.createElement('input'),
     input_2 = document.createElement('input'),
     button_1 = document.createElement('button'),
-    result_1 = document.createElement('p'); 
-    
-    container.appendChild(input_1);
-    container.appendChild(input_2);
-    container.appendChild(button_1);
+    result_1 = document.createElement('p');
 
-    input_1.classList.add('form-control', 'm-1');
-    input_1.setAttribute('placeholder', 'Введите первое число');
-    input_1.value = 0;
+container.appendChild(input_1);
+container.appendChild(input_2);
+container.appendChild(button_1);
 
-    input_2.classList.add('form-control', 'm-1');
-    input_2.setAttribute('placeholder', 'Введите второе число');
-    input_2.value = 0;
+input_1.classList.add('form-control', 'm-1');
+input_1.setAttribute('placeholder', 'Введите первое число');
+input_1.value = 0;
 
-    button_1.innerText = "Сравнить";
-    button_1.classList.add('btn', 'btn-dark', 'm-1');
-    button_1.style.width = '100%';
+input_2.classList.add('form-control', 'm-1');
+input_2.setAttribute('placeholder', 'Введите второе число');
+input_2.value = 0;
 
-    button_1.onclick = () => {
-        if (input_1.value > input_2.value) {           
-            result_1.innerText = 'Первое значение больше!';
-            container.appendChild(result_1);
-        } else if (input_1.value < input_2.value) {
-            result_1.innerText = 'Второе значение больше!';
-            container.appendChild(result_1);
-        } else {
-            result_1.innerText = 'Значения равны!';
-            container.appendChild(result_1);
-        }
+button_1.innerText = "Сравнить";
+button_1.classList.add('btn', 'btn-dark', 'm-1');
+button_1.style.width = '100%';
+
+button_1.onclick = function () {
+    if (input_1.value > input_2.value) {
+        result_1.innerText = 'Первое значение больше!';
+        container.appendChild(result_1);
+    } else if (input_1.value < input_2.value) {
+        result_1.innerText = 'Второе значение больше!';
+        container.appendChild(result_1);
+    } else {
+        result_1.innerText = 'Значения равны!';
+        container.appendChild(result_1);
     }
+};
 
 // Task 5.
 // Создайте на странице input, куда пользователь может вводить год рождения. 
@@ -421,7 +347,7 @@ let input_1 = document.createElement('input'),
 // если год рождения больше или равен 2000 - выводит в консоль возраст пользователя.
 
 
-let input_3 = document.createElement('input'),
+var input_3 = document.createElement('input'),
     button_2 = document.createElement('button'),
     result_2 = document.createElement('p');
 
@@ -435,23 +361,23 @@ button_2.innerText = "Узнать";
 button_2.classList.add('btn', 'btn-dark', 'm-1');
 button_2.style.width = '100%';
 
-button_2.onclick = () => {
+button_2.onclick = function () {
     if (input_3.value < 2000) {
-        result_2.innerText = 2019 - +input_3.value;           
-        container.appendChild(result_2);           
+        result_2.innerText = 2019 - +input_3.value;
+        container.appendChild(result_2);
     } else if (input_3.value >= 2000) {
-        result_2 = 2019 - input_3.value;            
-        console.info(`Возраст пользователя: ${result_2} лет`)
+        result_2 = 2019 - input_3.value;
+        console.info('\u0412\u043E\u0437\u0440\u0430\u0441\u0442 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F: ' + result_2 + ' \u043B\u0435\u0442');
     } else {
         return false;
     }
-}
+};
 
 // Task 7.
 // Создайте input куда пользователь может ввести число. 
 // После нажатия кнопки - на страницу должно выводиться сообщение - большие или меньше нуля это число.
 
-let input_4 = document.createElement('input'),
+var input_4 = document.createElement('input'),
     button_3 = document.createElement('button'),
     result_5 = document.createElement('p');
 
@@ -465,17 +391,17 @@ button_3.innerText = "Определить больше или меньше ну
 button_3.classList.add('btn', 'btn-dark', 'm-1');
 button_3.style.width = '100%';
 
-button_3.onclick = () => {
+button_3.onclick = function () {
     if (input_4.value > 0) {
-        alert(`${input_4.value} больше нуля!`);           
+        alert(input_4.value + ' \u0431\u043E\u043B\u044C\u0448\u0435 \u043D\u0443\u043B\u044F!');
     } else if (input_4.value < 0) {
-        alert(`${input_4.value} меньше нуля!`);
+        alert(input_4.value + ' \u043C\u0435\u043D\u044C\u0448\u0435 \u043D\u0443\u043B\u044F!');
     } else if (input_4.value == 0) {
-        alert(`${input_4.value} равен нулю!`);
+        alert(input_4.value + ' \u0440\u0430\u0432\u0435\u043D \u043D\u0443\u043B\u044E!');
     } else {
         return false;
     }
-}
+};
 
 // Task 8.
 // Создайте input куда пользователь может ввести число. 
@@ -484,7 +410,7 @@ button_3.onclick = () => {
 // Нужно получить целый остаток от деления (читать за оператор), для этого используется оператор % . 
 // И проверить. Если остаток от деления 0 - то число четное, если нет - не четное.
 
-let input_5 = document.createElement('input'),
+var input_5 = document.createElement('input'),
     button_4 = document.createElement('button'),
     result_6 = document.createElement('p');
 
@@ -498,10 +424,10 @@ button_4.innerText = "Определить чётное или нечётное 
 button_4.classList.add('btn', 'btn-dark', 'm-1');
 button_4.style.width = '100%';
 
-button_4.onclick = () => {
+button_4.onclick = function () {
     if (input_5.value % 2 == 0) {
-        alert(`${input_5.value} чётное!`);
+        alert(input_5.value + ' \u0447\u0451\u0442\u043D\u043E\u0435!');
     } else {
-        alert(`${input_5.value} нечётное!`);
+        alert(input_5.value + ' \u043D\u0435\u0447\u0451\u0442\u043D\u043E\u0435!');
     }
-}
+};
