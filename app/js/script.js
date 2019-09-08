@@ -2,6 +2,7 @@ let body = document.getElementsByTagName('body')[0],
     container = document.createElement('div');
 
 body.appendChild(container);
+container.classList.add('container');
 
 let response = [
     {
@@ -379,35 +380,69 @@ if (b > c) {
 // Добавьте кнопку. При нажатии кнопки выполняйте функцию, которая сравнит два числа и выведет большее на страницу. 
 // Если числа равны - выводится строка "равны".
 
-let input_one = document.createElement('input'),
-    input_two = document.createElement('input'),
-    button = document.createElement('button'),
-    result = document.createElement('p');    
+let input_1 = document.createElement('input'),
+    input_2 = document.createElement('input'),
+    button_1 = document.createElement('button'),
+    result_1 = document.createElement('p'); 
+    
+    container.appendChild(input_1);
+    container.appendChild(input_2);
+    container.appendChild(button_1);
 
-    container.classList.add('container');
-    container.appendChild(input_one);
-    container.appendChild(input_two);
-    container.appendChild(button);
+    input_1.classList.add('form-control', 'm-1');
+    input_1.setAttribute('placeholder', 'Введите первое число');
+    input_1.value = 0;
 
-    input_one.classList.add('form-control', 'm-1');
-    input_one.setAttribute('placeholder', 'Введите первое число');
+    input_2.classList.add('form-control', 'm-1');
+    input_2.setAttribute('placeholder', 'Введите второе число');
+    input_2.value = 0;
 
-    input_two.classList.add('form-control', 'm-1');
-    input_two.setAttribute('placeholder', 'Введите второе число');
+    button_1.innerText = "Сравнить";
+    button_1.classList.add('btn', 'btn-dark', 'm-1');
+    button_1.style.width = '100%';
 
-    button.innerText = "Сравнить";
-    button.classList.add('btn', 'btn-dark', 'm-1');
-    button.style.width = '100%';
-
-    button.onclick = () => {
-        if (input_one.value > input_two.value) {           
-            result.innerText = 'Первое значение больше!'
-            container.appendChild(result);
-        } else if (input_one.value < input_two.value) {
-            result.innerText = 'Второе значение больше!'
-            container.appendChild(result);
+    button_1.onclick = () => {
+        if (input_1.value > input_2.value) {           
+            result_1.innerText = 'Первое значение больше!';
+            container.appendChild(result_1);
+        } else if (input_1.value < input_2.value) {
+            result_1.innerText = 'Второе значение больше!';
+            container.appendChild(result_1);
         } else {
-            result.innerText = 'Значения равны!'
-            container.appendChild(result);
+            result_1.innerText = 'Значения равны!';
+            container.appendChild(result_1);
+        }
+    }
+
+// Task 5.
+// Создайте на странице input, куда пользователь может вводить год рождения. 
+// Добавьте кнопку. При нажатии кнопки выполняйте функцию, 
+// которая если год рождения меньше 2000 выводит на страницу возраст пользователя (2019 - введенный год рождения), 
+// если год рождения больше или равен 2000 - выводит в консоль возраст пользователя.
+
+
+let input_3 = document.createElement('input'),
+    button_2 = document.createElement('button'),
+    result_2 = document.createElement('p');
+
+    container.appendChild(input_3);
+    container.appendChild(button_2);
+
+    input_3.classList.add('form-control', 'm-1');
+    input_3.setAttribute('placeholder', 'Введите год рождения');
+
+    button_2.innerText = "Узнать";
+    button_2.classList.add('btn', 'btn-dark', 'm-1');
+    button_2.style.width = '100%';
+
+    button_2.onclick = () => {
+        if (input_3.value < 2000) {
+            result_2.innerText = 2019 - +input_3.value;           
+            container.appendChild(result_2);           
+        } else if (input_3.value >= 2000) {
+            result_2 = 2019 - input_3.value;            
+            console.info(`Возраст пользователя: ${result_2} лет`)
+        } else {
+            return false;
         }
     }
