@@ -1,3 +1,8 @@
+let body = document.getElementsByTagName('body')[0],
+    container = document.createElement('div');
+
+body.appendChild(container);
+
 let response = [
     {
     "_id": "5d57c12ec06d325a4387b1e8",
@@ -271,7 +276,7 @@ let response = [
     }
 ];
 
-//------------------------------------------------------------------------------
+// For Each -----------------------------------------------------------------------
 
 let arr_name = [];
 let arr_balanse = [];
@@ -284,11 +289,10 @@ response.forEach(element => {
     arr_balanse.push(element.balance);
 });
 
-let body = document.getElementsByTagName('body')[0];
 let ul = document.createElement('ul');
 
 ul.classList.add('list-group');
-body.appendChild(ul);
+container.appendChild(ul);
 
 arr_name.forEach(element => {
     let li = document.createElement('li');
@@ -312,7 +316,7 @@ arr_balanse.forEach(element => {
 
 console.log(arr_name);
 
-//------------------------------------------------------------------------------
+// Map --------------------------------------------------------------------------
 
 let numbers = [-11, -8 , 5, 0, 4, 7, 10];
 let new_numbers = numbers.filter(element => {
@@ -325,7 +329,7 @@ const data = response.map(({ name, balance })  =>  ({ name, balance }));
 console.log(data);
 
 
-//------------------------------------------------------------------------------
+// Filter ----------------------------------------------------------------------
 
 let filter = response.filter(elem => {
     return elem.age > 29;
@@ -333,7 +337,7 @@ let filter = response.filter(elem => {
 
 console.log(filter);
 
-//------------------------------------------------------------------------------
+// Every and Some --------------------------------------------------------------
 
 let every = response.every(elem => {
     return elem.company == 'OPPORTECH';
@@ -348,3 +352,62 @@ let some = response.some(elem => {
 console.log(some);
 
 //------------------------------------------------------------------------------
+
+// Task 1.
+// Создайте переменную a = 4. Используя конструкцию if проверьте что a == 4. Выведите сообщение в консоль.
+
+let a = 4;
+
+if (a == 4) {
+    console.info('А = 4');
+}
+
+// Task 2.
+// Создайте b = 8 и с = 10. С помощью if, else выведите в консоль сообщение о том, какая из переменных больше.
+
+let b = 8,
+    c = 10;
+
+if (b > c) {
+    console.info('B больше C');
+} else {
+    console.info('C больше B')
+}
+
+// Task 4.
+// Создайте на странице 2 input, куда пользователь может вводить числа. 
+// Добавьте кнопку. При нажатии кнопки выполняйте функцию, которая сравнит два числа и выведет большее на страницу. 
+// Если числа равны - выводится строка "равны".
+
+let input_one = document.createElement('input'),
+    input_two = document.createElement('input'),
+    button = document.createElement('button'),
+    result = document.createElement('p');    
+
+    container.classList.add('container');
+    container.appendChild(input_one);
+    container.appendChild(input_two);
+    container.appendChild(button);
+
+    input_one.classList.add('form-control', 'm-1');
+    input_one.setAttribute('placeholder', 'Введите первое число');
+
+    input_two.classList.add('form-control', 'm-1');
+    input_two.setAttribute('placeholder', 'Введите второе число');
+
+    button.innerText = "Сравнить";
+    button.classList.add('btn', 'btn-dark', 'm-1');
+    button.style.width = '100%';
+
+    button.onclick = () => {
+        if (input_one.value > input_two.value) {           
+            result.innerText = 'Первое значение больше!'
+            container.appendChild(result);
+        } else if (input_one.value < input_two.value) {
+            result.innerText = 'Второе значение больше!'
+            container.appendChild(result);
+        } else {
+            result.innerText = 'Значения равны!'
+            container.appendChild(result);
+        }
+    }
