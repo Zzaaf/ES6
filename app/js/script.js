@@ -271,6 +271,8 @@ let response = [
     }
 ];
 
+//------------------------------------------------------------------------------
+
 let arr_name = [];
 let arr_balanse = [];
 
@@ -300,10 +302,17 @@ arr_balanse.forEach(element => {
     let span = document.createElement('span');    
     span.classList.add('badge', 'badge-primary', 'badge-pill');
     span.innerHTML = element;
+
+    let li = document.getElementsByClassName('badge');
+
+    for(let i = 0; i < li.length; i++) {
+        li[i].appendChild(span);
+    }    
 });
 
 console.log(arr_name);
 
+//------------------------------------------------------------------------------
 
 let numbers = [-11, -8 , 5, 0, 4, 7, 10];
 let new_numbers = numbers.filter(element => {
@@ -314,3 +323,28 @@ console.log(new_numbers);
 
 const data = response.map(({ name, balance })  =>  ({ name, balance }));
 console.log(data);
+
+
+//------------------------------------------------------------------------------
+
+let filter = response.filter(elem => {
+    return elem.age > 29;
+});
+
+console.log(filter);
+
+//------------------------------------------------------------------------------
+
+let every = response.every(elem => {
+    return elem.company == 'OPPORTECH';
+})
+
+console.log(every);
+
+let some = response.some(elem => {
+    return elem.company == 'OPPORTECH';
+})
+
+console.log(some);
+
+//------------------------------------------------------------------------------
