@@ -431,3 +431,119 @@ button_4.onclick = function () {
         alert(input_5.value + ' \u043D\u0435\u0447\u0451\u0442\u043D\u043E\u0435!');
     }
 };
+
+// Task 10.
+// Есть поле input куда пользователь может ввести свое имя. 
+// Нужно при нажатии кнопки - сказать с помощью alert('Hello имя_пользователя'), но хитрые пользователи часто нажимают несколько раз пробел. 
+// Вроде ничего и не ввел, но программа считывает пробелы и пытается работать. 
+// Напишите проверку, которая выводит предупреждение если пользователь ничего не ввел, или ввел один пробел. 
+// В остальных случаях - Hello... 
+
+var input_6 = document.createElement('input'),
+    button_5 = document.createElement('button'),
+    result_7 = document.createElement('p');
+
+container.appendChild(input_6);
+container.appendChild(button_5);
+
+input_6.classList.add('form-control', 'm-1');
+input_6.setAttribute('placeholder', 'Введите своё имя');
+
+button_5.innerText = "Сказать привет!";
+button_5.classList.add('btn', 'btn-dark', 'm-1');
+button_5.style.width = '100%';
+
+button_5.onclick = function () {
+    if (input_6.value != "" && input_6.value != " ") {
+        alert('\u041F\u0440\u0438\u0432\u0435\u0442, ' + input_6.value + '!');
+    } else {
+        console.error('Имя введено некорректно!');
+    }
+};
+
+// Task 11.
+// Хитрый пользователь научился обходить нашу предыдущую задачу, и начал вводить где 3, а где и 5 пробелов. 
+// Напишите программу, которая проверяет пробелы или нет введены в строку. Как защититься от пробелов? Обрезать их. 
+// Допустим вы получили значение из input в переменную a. 
+// Теперь напишите a = a.trim(); - это обрежет пробелы и результат запишет в переменную a. 
+// Теперь просто сравните переменную a c пустой строкой. 
+// Если она равна - выведите ошибку, если нет - сообщение с содержимым input.
+
+var input_7 = document.createElement('input'),
+    button_6 = document.createElement('button'),
+    result_8 = document.createElement('p');
+
+container.appendChild(input_7);
+container.appendChild(button_6);
+
+input_7.classList.add('form-control', 'm-1');
+input_7.setAttribute('placeholder', 'Введите своё имя');
+
+button_6.innerText = "Сказать привет ещё раз!";
+button_6.classList.add('btn', 'btn-dark', 'm-1');
+button_6.style.width = '100%';
+
+button_6.onclick = function () {
+
+    input_7.value = input_7.value.trim();
+
+    if (input_7.value == "") {
+        console.error('Имя введено некорректно!');
+    } else {
+        alert('\u041F\u0440\u0438\u0432\u0435\u0442, ' + input_7.value + '!');
+    }
+};
+
+// Task 13.
+// Пользователь может ввести номер дома. 
+// Если дом от 1 до 5 - то улица 1, если от 6 до 11 - улица 2, если от 11 до 20 - улица 3. 
+// Используя if, elseif - реализуйте программу, которая будет указывать улицу в зависимости от введенного дома.
+
+var input_8 = document.createElement('input'),
+    button_7 = document.createElement('button'),
+    result_9 = document.createElement('p');
+
+container.appendChild(input_8);
+container.appendChild(button_7);
+
+input_8.classList.add('form-control', 'm-1');
+input_8.setAttribute('placeholder', 'Введите номер дома');
+
+button_7.innerText = "Узнать улицу";
+button_7.classList.add('btn', 'btn-dark', 'm-1');
+button_7.style.width = '100%';
+
+button_7.onclick = function () {
+
+    switch (+input_8.value) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+            console.info('Улица #1');
+            break;
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+        case 10:
+            console.info('Улица #2');
+            break;
+        case 11:
+        case 12:
+        case 13:
+        case 14:
+        case 15:
+        case 16:
+        case 17:
+        case 18:
+        case 19:
+        case 20:
+            console.info('Улица #3');
+            break;
+        default:
+            console.info('Улицы нет в базе');
+            break;
+    }
+};
