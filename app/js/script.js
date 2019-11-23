@@ -621,3 +621,93 @@ button_7.onclick = () => {
           break;
       }
 }
+
+var ab = 'false'; // true так как имеет значение
+
+if (ab) {
+    console.log("A - true")
+} else {
+    console.log("A - false")
+}
+
+var as = true % 1; // false, так как булевые делить нельзя
+
+if (as) {
+    console.log("AS - true")
+} else {
+    console.log("AS - false")
+}
+
+var h = ''; // false. так как пустая строка = false
+
+if (h) {
+    console.log("H - true")
+} else {
+    console.log("H - false")
+}
+
+var o = new Boolean(new Boolean(false)); // true, надо разобрать
+
+if (o) {
+    console.log("O - true")
+} else {
+    console.log("O - false")
+}
+
+var l = {}; // true, так как объект есть
+
+if (l) {
+    console.log("L - true")
+} else {
+    console.log("L - false")
+}
+
+var t = new String(''); // true,
+
+
+if (t) {
+    console.log("T - true")
+} else {
+    console.log("T - false")
+}
+
+var k = new Boolean(function(){}); // true, 
+
+if (k) {
+    console.log("K - true")
+} else {
+    console.log("K - false")
+}
+
+var u = Math.min() < Math.max(); // false, почему?
+
+if (u) {
+    console.log("U - true")
+} else {
+    console.log("U - false")
+}
+
+// function check(word) {
+//     let s = word.split(''),    
+//     symbols_1 = s.slice(0, s.length / 2),
+//     symbols_2 = s.slice(s.length / 2);
+
+//     if (symbols_1.toString() == symbols_2.reverse().toString()) {
+//         console.log('Это палиндром');
+//     } else {
+//         console.log('Это не палиндром');
+//     }
+// }
+
+// check('оппо');
+
+function check(string) {
+    const rev = string.split('').reverse().join('');
+    if (rev == string) {
+        console.log('Это палиндром');
+    } else {
+        console.log('Это не палиндром');
+    }    
+}
+
+check('мама');
