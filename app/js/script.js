@@ -710,4 +710,34 @@ function check(string) {
     }    
 }
 
-check('мама');
+check('абба');
+
+function creator(form, color, number) {
+    let wrap = document.createElement('div');
+    wrap.style.display = 'flex';
+    container.appendChild(wrap);
+
+    if(form == "square") {        
+        let i = 0;
+        let timer = setInterval(function () {
+            let element = document.createElement('div');
+
+            element.style.backgroundColor = color;
+            element.style.display = 'flex';
+            element.style.borderRadius = 10 + 'px';
+            element.style.margin = 10 + 'px';
+            element.style.width = 100 + 'px';
+            element.style.height = 100 + 'px';
+            wrap.appendChild(element);
+
+            if (i++ == number - 1) {
+            clearTimeout(timer);
+            }
+            
+        }, 1000);
+    } else {
+        return false
+    }
+}
+
+creator("square", "green", 7);
